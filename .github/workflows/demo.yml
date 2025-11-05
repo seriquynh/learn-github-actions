@@ -1,0 +1,29 @@
+name: 'Demo'
+
+on:
+  - push
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo 'Build'
+
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo 'Test'
+
+  package:
+    name: Package
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo 'Package'
+
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo 'Deploy'

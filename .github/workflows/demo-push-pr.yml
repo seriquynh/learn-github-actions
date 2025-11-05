@@ -1,0 +1,14 @@
+name: 'Demo push'
+
+on:
+  push:
+    branches: ['feature-a']
+  pull_request:
+    branches: ['test']
+
+jobs:
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "The branch is ${{ github.ref }}"

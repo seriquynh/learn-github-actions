@@ -1,0 +1,32 @@
+name: 'Demo Parallel'
+
+on:
+  - push
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo 'Build'
+
+  test:
+    name: Test
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo 'Test'
+
+  package:
+    name: Package
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo 'Package'
+
+  deploy:
+    name: Deploy
+    needs: package
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo 'Deploy'

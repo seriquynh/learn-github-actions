@@ -9,3 +9,5 @@ jobs:
   test:
     name: Test
     runs-on: ubuntu-latest
+    steps:
+      - run: cat hello.txt

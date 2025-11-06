@@ -1,0 +1,11 @@
+name: 'Demo push files'
+
+on:
+  push:
+    paths:
+      - hello.txt
+
+jobs:
+  test:
+    name: Test
+    runs-on: ubuntu-latest

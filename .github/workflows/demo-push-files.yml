@@ -3,6 +3,7 @@ name: 'Demo push files'
 on:
   push:
     paths:
+      - .github/workflows/demo-push-files.yml
       - hello.txt
 
 jobs:
@@ -10,4 +11,5 @@ jobs:
     name: Test
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v5
       - run: cat hello.txt
